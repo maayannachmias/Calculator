@@ -1,95 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #e6f7ff; 
+    }
+
+    h1 {
+      color: #3366cc; 
+    }
+
+    .calculator {
+      display: inline-block;
+      background-color: #b3d9ff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    }
+
+    input, button {
+      margin: 5px;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    input {
+      width: 200px;
+      background-color: #cce6ff;
+      text-align: right;
+    }
+
+    button {
+      width: 50px;
+      background-color: #3366cc; 
+      color: #fff;
+    }
+
+    button:hover {
+      background-color: #005bb5; 
+    }
+
+    button.operator {
+      background-color: #ff8533;
+    }
+
+    button.operator:hover {
+      background-color: #cc6600;
+    }
+
+    button.equal {
+      background-color: #4caf50;
+    }
+
+    button.equal:hover {
+      background-color: #388e3c; 
+    }
+  </style>
 </head>
-<style>
-    body{
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-    }
-    .container{
-        width: 400px;
-        margin: 40px auto;
-        background-color: gainsboro;
-        padding: 10px;
-    }
-    .monitor{
-        background-color: black;
-        padding: 5px;
-        color: white;
-    }
-    .but{
-        float: left;
-        width: 110px;
-        margin: 10px;
-        background-color: white;
-        text-align: center;
-        padding-top: 15px;
-        border-radius: 4px;
-        cursor: pointer;
-        border: 1.5px solid rgb(16, 13, 13);
-    }
-    .but:hover{
-        background-color: burlywood;
-        color: white;
-    }
-    .signBut{
-        float: left;
-        width: 56px;
-        margin: 10px;
-        background-color: orange;
-        text-align: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-radius: 20px;
-        cursor: pointer;
-        border: 1.5px solid rgb(16, 13, 13);
-    }
-    .signBut:hover{
-        background-color: burlywood;
-        color: black;
-    }
-    .result{
-        margin: 5px;
-        background-color: white;
-        text-align: center;
-        padding-top: 5px;
-        border-radius: 4px;
-        cursor: pointer;
-        border: 1.5px solid rgb(16, 13, 13);
-    }
-    .result:hover{
-        background-color:  burlywood;
-        color: white;
-    }
-</style>
 <body>
-    <div style="text-align: center; font-size: 24px; color:  black;">
-    Calculator
-    </div>
-    <div class="container">
-        <div class="monitor">temp</div>
-        <div class="but">1</div>
-        <div class="but">2</div>
-        <div class="but">3</div>
-        <div class="but">4</div>
-        <div class="but">5</div>
-        <div class="but">6</div>
-        <div class="but">7</div>
-        <div class="but">8</div>
-        <div class="but">9</div>
-        <div class="but">0</div>
-        <div class="but">•</div>
-        <div class="but">C</div>
-        <div class="signBut">+</div>
-        <div class="signBut">-</div>
-        <div class="signBut">*</div>
-        <div class="signBut">/</div>
-        <div class="signBut">^</div>
-        <div style="clear: both;"></div>
-        <div class="result">=</div>
-    </div>
+
+  <div class="calculator">
+    <h1>Calculator</h1>
+  
+    <input type="text" id="display" disabled>
+    
+    <br>
+    
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button class="operator">+</button>
+    
+    <br>
+    
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button class="operator">-</button>
+    
+    <br>
+    
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button class="operator">*</button>
+    
+    <br>
+    
+    <button>0</button>
+    <button class="equal">=</button>
+    <button class="operator">/</button>
+  </div>
+
 </body>
 </html>
