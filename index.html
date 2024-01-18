@@ -1,63 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTW App Template</title>
-    <!--
-        The tailwind CDN is designed for development purposes only, and is not the best choice for production.
-        Read more here: https://tailwindcss.com/docs/installation 
-    -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- example for dark theme styling when using tailwind cdn -->
-    <style>
-        /*examples for dark/light themes*/
-        .dark .dark\:text-white {
-            color: #fff;
-        }
-        .dark .dark\:bg-gray-800 {
-            background-color: #1f2937;
-        }
-        .light .light\:text-black {
-            color: #000;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #e6f7ff; 
+    }
 
-        /*add your custom css rules here*/
-    </style>
+    h1 {
+      color: #3366cc; 
+    }
+
+    .calculator {
+      display: inline-block;
+      background-color: #b3d9ff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    }
+
+    input, button {
+      margin: 5px;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    input {
+      width: 200px;
+      background-color: #cce6ff;
+      text-align: right;
+    }
+
+    button {
+      width: 50px;
+      background-color: #3366cc; 
+      color: #fff;
+    }
+
+    button:hover {
+      background-color: #005bb5; 
+    }
+
+    button.operator {
+      background-color: #ff8533;
+    }
+
+    button.operator:hover {
+      background-color: #cc6600;
+    }
+
+    button.equal {
+      background-color: #4caf50;
+    }
+
+    button.equal:hover {
+      background-color: #388e3c; 
+    }
+  </style>
 </head>
+<body>
 
-<body class="dark:text-white light:text-black">
+  <div class="calculator">
+    <h1>Calculator</h1>
+  
+    <input type="text" id="display" disabled>
+    
+    <br>
+    
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button class="operator">+</button>
+    
+    <br>
+    
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button class="operator">-</button>
+    
+    <br>
+    
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button class="operator">*</button>
+    
+    <br>
+    
+    <button>0</button>
+    <button class="equal">=</button>
+    <button class="operator">/</button>
+  </div>
 
-    <!-- your app code goes here -->
+  <script>
+    // custom config for the MTW app 
+    const mtwAppConfig = {
+        border: true // app border in the MTW page                    
+    }
 
-    <!-- special scripts for integration in App Gallery - must be placed at the bottom of the HTML after your code -->
-    <script>
-        // custom config for the MTW app 
-        const mtwAppConfig = {
-            border: true // app border in the MTW page                    
-        }
+    ///////////////////////////////////////////////////////
+    // implement this functions in order to use private API        
+    const sendPrivateApiRequest = async () => {
+        // your code here:
+        // sendRequestToParent({ cat: 'getAssets' })
+    }        
 
-        ///////////////////////////////////////////////////////
-        // implement this functions in order to use private API        
-        const sendPrivateApiRequest = async () => {
-            // your code here:
-            // sendRequestToParent({ cat: 'getAssets' })
-        }        
+    const acceptPrivateApiResponse = async (data) => {
+        // process received data here:
+        // console.log(data)
+    }
 
-        const acceptPrivateApiResponse = async (data) => {
-            // process received data here:
-            // console.log(data)
-        }
+    // use this in order to send on document load
+    document.addEventListener('DOMContentLoaded', () => {
+        // your code here:
+        //sendRequestToParent({ method: 'getAssets' })
+    })
 
-        // use this in order to send on document load
-        document.addEventListener('DOMContentLoaded', () => {
-            // your code here:
-            //sendRequestToParent({ method: 'getAssets' })
-        })
-
-    </script>
-    <script src="https://morethanwallet.com/appstore/index.js"></script>
+</script>
+<script src="https://morethanwallet.com/appstore/index.js"></script>
 </body>
-
 </html>
+
+
